@@ -1,0 +1,28 @@
+{
+  "proxy": {
+    "/dev-api": {
+      "enable": true,
+      "target": "http://127.0.0.1:8099"
+    }
+  },
+  "plugins": [
+    "build-plugin-icestark",
+    [
+      "build-plugin-fusion",
+      {
+        "themePackage": "@alifd/theme-design-pro",
+        "themeConfig": {
+          "nextPrefix": "next-icestark-"
+        }
+      }
+    ],
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ]
+  ]
+}
